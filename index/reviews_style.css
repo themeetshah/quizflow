@@ -1,0 +1,111 @@
+body {
+    background: linear-gradient(to bottom left, #0a0a0a, #333333, #0a0a0a);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    height: auto;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Navbar Styling */
+.navbar {
+    padding: 5px;
+    top: 0;
+    z-index: 9999;
+    box-shadow: none;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.testimonial-title {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #f5a623;
+}
+
+.filter-container {
+    margin-bottom: 20px;
+}
+
+/* Bootstrap Card styles for testimonials */
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s;
+    height: fit-content !important;
+    /* For the overlapping image effect, you might consider making the card position relative */
+    position: relative;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #f5a623;
+    margin-top: -45px;
+    background: #fff;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 15px;
+    color: #ffffff;
+}
+
+.card-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #cccccc;
+}
+
+.stars {
+    font-size: 1.2rem;
+    color: #f5a623;
+    margin-bottom: 0.5rem;
+}
+
+/* Read More Button */
+#load-more {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #f5a623, #ffbb33);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#load-more:hover {
+    background: linear-gradient(135deg, #ffbb33, #f5a623);
+}
