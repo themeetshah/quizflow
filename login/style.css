@@ -1,0 +1,451 @@
+/* Basic reset and layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+    color: white;
+}
+
+body,
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #25252b;
+}
+
+.login-big .container {
+    position: relative;
+    width: 770px;
+    height: 550px;
+    border: 2px solid #ffbb33;
+    box-shadow: 0 0 25px #ffbb33;
+    overflow: hidden;
+}
+
+.login-big .container .form-box {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login-big .form-box.login {
+    left: 0;
+    padding: 0 40px;
+}
+
+.login-big .form-box.login .animation {
+    transform: translateX(0%);
+    transition: 1.3s;
+    opacity: 1;
+    filter: blur(0);
+    /* transition-delay: calc(.1s*var(--S)); */
+}
+
+.login-big .container.active .form-box.login .animation {
+    transform: translateX(-120%);
+    opacity: 0;
+    filter: blur(10px);
+}
+
+.login-big .form-box.register {
+    /* display: none; */
+    right: 0;
+    padding: 0 60px;
+}
+
+.login-big .form-box.register .animation {
+    transform: translateX(120%);
+    transition: 1.3s ease;
+    opacity: 0;
+    filter: blur(10px);
+    /* transition-delay: calc(.1s*var(--S)); */
+}
+
+.login-big .container.active .form-box.register .animation {
+    transform: translateX(0%);
+    opacity: 1;
+    filter: blur(0);
+    /* transition-delay: calc(.1s*var(--li)); */
+}
+
+.login-big .form-box h2 {
+    font-size: 32px;
+    text-align: center;
+}
+
+.login-big .form-box .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-top: 25px;
+}
+
+.login-big .input-box:not(.role) input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    border-bottom: 2px solid #fff;
+    padding-right: 23px;
+    transition: .5s;
+}
+
+.login-big .input-box:not(.role) label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    transition: .5s;
+}
+
+.login-big .input-box:not(.role) input:focus,
+.login-big .input-box:not(.role) input:valid {
+    border-bottom: 2px solid #ffbb33;
+}
+
+.login-big .input-box:not(.role) input:focus~label,
+.login-big .input-box:not(.role) input:valid~label {
+    top: -5px;
+    color: #ffbb33;
+}
+
+.login-big .input-box.role .role-option {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.login-big .input-box.role input~label {
+    color: white;
+}
+
+.login-big .input-box.role input:checked~label {
+    color: #ffbb33;
+    font-weight: bold;
+    /* Optional: style for checked label */
+}
+
+/* .login-big .input-box.role input:checked~label {
+    top: -5px;
+    color: #ffbb33;
+} */
+
+.login-big .input-box i {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 18px;
+    transform: translateY(-50%);
+    transition: .5s;
+}
+
+.login-big .input-box input:focus~i,
+.login-big .input-box input:valid~i {
+    color: #ffbb33;
+}
+
+.login-big .btn {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #ffbb33;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.login-big .btn::before {
+    content: "";
+    position: absolute;
+    height: 300%;
+    width: 100%;
+    background: linear-gradient(#25252b, #ffbb33, #25252b, #ffbb33);
+    top: -100%;
+    left: 0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.login-big .btn:hover::before {
+    top: 0;
+}
+
+.login-big .regi-link {
+    font-size: 14px;
+    text-align: center;
+    margin: 10px 0 10px;
+}
+
+.login-big .regi-link a {
+    text-decoration: none;
+    color: #ffbb33;
+    font-weight: 600;
+}
+
+.login-big .regi-link a:hover {
+    text-decoration: underline;
+}
+
+.login-big .regi-link p {
+    margin: auto;
+}
+
+.login-big .info-content {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login-big .info-content.login {
+    right: 0;
+    text-align: right;
+    padding: 0 40px 60px 150px;
+}
+
+.login-big .info-content.login .animation {
+    transform: translateX(0);
+    transition: 1s ease;
+    opacity: 1;
+    filter: blur(0);
+    /* transition-delay: calc(.1s*var(--S)); */
+}
+
+.login-big .container.active .info-content.login .animation {
+    transform: translateX(120%);
+    opacity: 0;
+    filter: blur(10px);
+    /* transition-delay: calc(.1s*var(--D)); */
+}
+
+.login-big .info-content.register {
+    /* display: none; */
+    left: 0;
+    text-align: left;
+    padding: 0 130px 60px 40px;
+    pointer-events: none;
+}
+
+.login-big .info-content.register .animation {
+    transform: translateX(-120%);
+    transition: 1s ease;
+    opacity: 0;
+    filter: blur(10px);
+    /* transition-delay: calc(.1s*var(--S)); */
+}
+
+.login-big .container.active .info-content.register .animation {
+    transform: translateX(0%);
+    opacity: 1;
+    filter: blur(0);
+    /* transition-delay: calc(.1s*var(--li)); */
+}
+
+.login-big .info-content h2 {
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 1.3;
+}
+
+.login-big .info-content p {
+    font-size: 16px;
+}
+
+.login-big .container .curved-shape {
+    position: absolute;
+    right: 0;
+    top: -5px;
+    height: 700px;
+    width: 850px;
+    border-bottom: 2px solid #ffbb33;
+    background: linear-gradient(55deg, #25252b, #ffbb33);
+    transform: rotate(15deg) skewY(41deg);
+    /* transform: rotate(0deg) skewY(0deg); */
+    transform-origin: bottom right;
+    transition: 1.2s ease;
+    /* transition: 1.6s; */
+}
+
+.login-big .container.active .curved-shape {
+    /* transform: rotate(10deg) skewY(40deg); */
+    transform: rotate(0deg) skewY(0deg);
+    /* transition-delay: .5s; */
+}
+
+.login-big .container .curved-shape2 {
+    position: absolute;
+    left: 330px;
+    top: 100%;
+    height: 850px;
+    width: 950px;
+    background: #25252b;
+    transform: rotate(0deg) skewY(0deg);
+    border-top: 3px solid #ffbb33;
+    transform-origin: bottom left;
+    transition: 1.2s ease;
+    /* transition-delay: .5s; */
+}
+
+.login-big .container.active .curved-shape2 {
+    /* transform: rotate(10deg) skewY(40deg); */
+    transform: rotate(-10deg) skewY(-50deg);
+    /* transition-delay: .2s; */
+}
+
+.login-small .row {
+    margin: 10px 0px !important;
+}
+
+/* Design for login-small */
+.login-small .login-container {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    border: 2px solid #ffbb33;
+    box-shadow: 0 0 25px #ffbb33 !important;
+}
+
+.login-small .login-container .text-center {
+    margin-bottom: 20px;
+}
+
+.login-small .login-container .text-center h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffbb33;
+}
+
+.login-small .login-container .text-center p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.login-small .login-container form {
+    display: flex;
+    flex-direction: column;
+    /* gap: 13px; */
+}
+
+.login-small .login-container form input {
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    transition: .5s;
+    font-size: 16px;
+}
+
+.login-small .login-container form input:focus {
+    border-color: #ffbb33;
+    outline: none;
+}
+
+.login-small .btn {
+    margin: 10px auto !important;
+    position: relative;
+    width: 90%;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #ffbb33;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.login-small .btn::before {
+    content: "";
+    position: absolute;
+    height: 300%;
+    width: 100%;
+    background: linear-gradient(#25252b, #ffbb33, #25252b, #ffbb33);
+    top: -100%;
+    left: 0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.login-small .btn:hover::before {
+    top: 0;
+}
+
+.alert {
+    color: #f44336;
+    font-size: 14px;
+    padding: 5px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    /* display: none; */
+}
+
+.login-small .login-container .text-center a {
+    color: #ffbb33;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0px !important;
+}
+
+.login-small .login-container .links p {
+    margin: auto;
+}
+
+.login-small .login-container .text-center a:hover {
+    text-decoration: underline;
+}
+
+/* Add transition animations */
+.login-small .login-container h2,
+.login-small .login-container p,
+.login-small .login-container label,
+.login-small .login-container input,
+.login-small .login-container .btn {
+    animation: fadeIn 0.8s ease forwards;
+    opacity: 0;
+}
+
+.login-small .login-container h2,
+.login-small .login-container p {
+    animation-delay: 0.2s;
+}
+
+.login-small .login-container label,
+.login-small .login-container input {
+    animation-delay: 0.4s;
+}
+
+.login-small .login-container .btn {
+    animation-delay: 0.6s;
+}
+
+/* Keyframes for fade-in */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
