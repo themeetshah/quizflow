@@ -1,0 +1,224 @@
+body,
+html {
+    height: 100vh;
+    margin: 0;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Poppins', Verdana;
+    background: #0a0a0a;
+    color: #e0e0e0;
+}
+
+/* Navbar Styling */
+.navbar {
+    /* background-color: #1a1a1a; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 15px 0;
+    padding: 5px;
+}
+
+.navbar-brand a {
+    color: #f5a623;
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand a:hover {
+    color: #ffbb33;
+}
+
+.navbar .nav-link {
+    color: #cccccc;
+    font-size: 1.1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #ffbb33;
+    background-color: #333333;
+    border-radius: 6px;
+}
+
+.navbar .nav-link.active {
+    color: #f5a623;
+    background-color: #444444;
+    border-radius: 6px;
+}
+
+.navbar-toggler {
+    background-color: #ffbb33;
+}
+
+/* Button Styling */
+.btn-primary {
+    background-color: #f5a623 !important;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.1rem;
+    padding: 10px 12px;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover {
+    /* background-color: #484848 !important; */
+    background-color: #eaeaea !important;
+    color: #ffa91f !important;
+    transform: scale(1.03);
+}
+
+.btn:disabled {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #b0b0b0;
+    cursor: not-allowed;
+}
+
+.btn:not(.btn-primary, .btn-outline-warning, .btn-secondary, .btn-create-quiz) {
+    background-color: #f5a623;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 50px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-outline-warning {
+    border: 1px solid #f5a623;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 50px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Button Styling */
+button {
+    border-radius: 6px;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:not(.btn-secondary, .btn-create-quiz):hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1);
+}
+
+/* Content Styling */
+.content {
+    padding: 30px 40px;
+    border-radius: 18px;
+    margin-top: 40px;
+}
+
+/* Main Heading */
+h1 {
+    color: #ffffff;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Subheading and Description */
+p.lead {
+    color: #dcdcdc;
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+/* Subtitle Styling */
+.subtitle {
+    text-align: center;
+    color: #dcdcdc;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    /* padding: 0 20px; */
+}
+
+/* Fade-up animation */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-up {
+    opacity: 0;
+    animation: fadeUp 1s ease-out forwards;
+}
+
+/* Modal Styles */
+.modal-content {
+    background: #333333;
+    color: #f0f0f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.modal-header {
+    border-bottom: 1px solid #444444;
+    padding-bottom: 15px;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #444444;
+    border-color: #444444;
+}
+
+.modal-footer .btn-primary {
+    background-color: #f5a623;
+    border-color: #f5a623;
+    padding: 8px 18px !important;
+    margin: 5px;
+}
+
+@media screen and (max-width: 450px) {
+    .navbar .container-fluid {
+        padding: 0;
+    }
+
+    .navbar .navbar-brand .nav-link {
+        padding: 0;
+    }
+
+    .navbar-brand {
+        margin-right: 0;
+    }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .content {
+        padding: 20px 25px;
+        /* Less padding for smaller screens */
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+        /* Smaller button font */
+        padding: 10px 18px;
+    }
+}

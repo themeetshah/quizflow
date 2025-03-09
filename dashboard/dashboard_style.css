@@ -1,0 +1,94 @@
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 5px;
+    margin-top: 40px;
+    position: relative;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.6);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+    z-index: -1;
+}
+
+/* Card Title and Text */
+.card-title {
+    color: #f5a623;
+    /* Golden title for card */
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    /* letter-spacing: 1px; */
+}
+
+.card-title i {
+    /* color: white; */
+    color: #e2e0e0;
+    /* Golden title for card */
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    /* letter-spacing: 1px; */
+}
+
+.card-text {
+    color: #b0b0b0;
+    /* Light gray text for description */
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Input Fields */
+input,
+select,
+textarea {
+    background-color: #333333;
+    color: #f0f0f0;
+    border: 1px solid #444444;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #f5a623;
+    /* Golden border on focus */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    h1.display-4 {
+        font-size: 2rem;
+        /* Smaller font for heading */
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+        /* Smaller card title */
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+        /* Smaller card text */
+    }
+}

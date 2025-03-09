@@ -1,0 +1,48 @@
+#goBackButton {
+    background-color: transparent;
+    color: #e0e0e0;
+}
+
+#goBackButton:hover {
+    transform: scale(1.3);
+}
+
+i {
+    font-size: x-large;
+}
+
+/* Main Heading */
+h1 {
+    color: #ffffff;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+table {
+    width: 100%;
+    margin: auto;
+}
+
+.table-dark th {
+    background-color: #333333;
+}
+
+.table-dark td {
+    background-color: #222222;
+}
+
+/* Pulsing Glow Effect on the Table */
+.table {
+    position: relative;
+    z-index: 2;
+    border-radius: 10px;
+    background-color: rgba(34, 34, 34, 0.95);
+    /* box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); */
+}
+
+.table-responsive {
+    border-radius: 10px;
+    height: fit-content;
+}

@@ -1,0 +1,165 @@
+/* Subheading and Description */
+h1 {
+    color: #ffffff;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+p.lead {
+    color: #dcdcdc;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+.exam-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    padding: 5px;
+    position: relative;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.exam-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.6);
+}
+
+.exam-card::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent);
+    z-index: -1;
+}
+
+.exam-card .exam-title {
+    color: #f5a623;
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.exam-card .exam-category {
+    font-size: 1rem;
+    color: #b0b0b0;
+    margin-top: 10px;
+}
+
+.exam-card .exam-desc {
+    display: block;
+    font-size: 0.9rem;
+    /* color: #777; */
+}
+
+.card-title {
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.card-text {
+    font-size: 15px;
+    color: #d0d0d0;
+    line-height: 1.6;
+}
+
+.countdown {
+    font-size: 14px;
+    font-weight: 700;
+    color: #ff4d4d !important;
+    text-transform: uppercase;
+}
+
+#examsList {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 25px; */
+    /* justify-content: center; */
+    margin-top: 20px;
+}
+
+/* Badge Styling */
+.badge {
+    font-size: 14px;
+    padding: 8px 14px;
+    font-weight: 500;
+    border-radius: 6px;
+}
+
+/* Focus States for Accessibility */
+.search-bar:focus {
+    outline: none;
+    box-shadow: 0 0 8px #f5a623 !important;
+}
+
+/* Create Quiz Button */
+.btn-create-quiz {
+    background-color: #f5a623;
+    color: white;
+    padding: 0;
+    font-size: 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    height: 40px;
+}
+
+.btn-create-quiz:hover {
+    /* background-color: #222222;
+    color: white; */
+    background-color: #eaeaea;
+    color: #ffa91f;
+    /* transform: scale(1); */
+    transform: none;
+}
+
+/* Exam Filters */
+.exam-filters {
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* Input Fields */
+input,
+select,
+textarea {
+    background-color: #333333;
+    color: #f0f0f0;
+    border: 1px solid #444444;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #f5a623;
+    /* Golden border on focus */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .content {
+        padding: 20px 25px;
+        /* Less padding for smaller screens */
+    }
+
+    h1.display-4 {
+        font-size: 2rem;
+        /* Smaller font for heading */
+    }
+}

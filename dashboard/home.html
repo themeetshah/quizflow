@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizFlow</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- custom -->
+    <!-- <link rel="stylesheet" href="../index/index_styles.css"> -->
+    <link rel="stylesheet" href="common_style.css">
+    <link rel="stylesheet" href="home_style.css">
+    <link rel="website icon" href="../imgs/logo_icon_figma.png">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbarNav">
+    <!-- head part -->
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <div class="container-fluid p-0">
+                <div class="navbar-brand m-0">
+                    <a class="nav-link" href="dashboard.html">
+                        <img src="../imgs/logo_figma.png" class="me-1" alt="logo"></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav navbar-nav ms-auto flex-row d-md-flex justify-content-around">
+                        <li class="nav-item m-2">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item m-2">
+                            <a class="nav-link" href="dashboard.html">Dashboard</a>
+                        </li>
+                        <li class="nav-item m-2">
+                            <a class="nav-link" href="profile.html">Profile</a>
+                        </li>
+                        <li class="nav-item m-2">
+                            <a class="nav-link" href="exams.html">Exams</a>
+                        </li>
+                        <li class="nav-item m-2" id="grades-tab-li">
+                            <a class="nav-link" href="grades.html">Grades</a>
+                        </li>
+                        <li class="nav-item m-2"><button class="btn btn-primary" type="button" data-bs-toggle="modal"
+                                data-bs-target="#logoutModal">Logout</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- header part done -->
+    <section id="section-1" class="section-1 active d-flex">
+        <div class="abstract-background">
+            <div class="abstract-shape"></div>
+            <div class="abstract-shape"></div>
+            <div class="abstract-shape"></div>
+            <div class="abstract-shape"></div>
+            <div class="abstract-shape"></div>
+            <div class="abstract-shape"></div>
+            <div class="abstract-shape"></div>
+            <div class="abstract-shape"></div>
+        </div>
+
+        <div class="container-fluid pb-5">
+            <h1 class="display-2 m-1">Hey There! Welcome to the QuizFlow.</h1>
+
+            <!-- Icons Section -->
+            <div class="exam-icons">
+                <!-- Icon 1: Book SVG-->
+                <div class="exam-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 4v16c0 .55.45 1 1 1h18c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1z">
+                        </path>
+                        <path d="M22 6H2"></path>
+                        <path d="M2 8h20"></path>
+                        <path d="M5 12h6"></path>
+                        <path d="M5 16h6"></path>
+                    </svg>
+                </div>
+
+                <!-- Icon 2: Pencil -->
+                <div class="exam-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"
+                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 17v4h4l12-12-4-4-12 12H3z"></path>
+                    </svg>
+                </div>
+
+                <!-- Icon 3: Checkmark SVG -->
+                <div class="exam-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#FFBB33"
+                        stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="11" stroke="#FFBB33" stroke-width="1" fill="none" />
+                        <path d="M8 13l2 2l6 -7" stroke="#FFBB33" stroke-width="1" fill="none" />
+                    </svg>
+                </div>
+
+                <!-- Icon 4: Timer -->
+                <div class="exam-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"
+                        fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 6v6l4 2"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="section-2" id="section-2">
+        <div class="particles section-2_background">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+
+        <div class="moving-shapes section-2_background">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <div class="container-fluid p-4">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active text-center">
+                        <div class="row align-items-sm-center align-items-lg-stretch d-flex">
+                            <div class="col-12 col-md-5 order-md-2 carousel_img d-flex justify-content-center align-items-center"
+                                id="car_img_div_1" data-aos="fade-left">
+                                <img src="../imgs/banner_img.png" class="w-75" id="car_img_1">
+                            </div>
+                            <div class="col-12 col-md-7 order-md-1 carousel_text mt-5" id="car_des_div_1"
+                                data-aos="fade-right">
+                                <h5 class="text-uppercase mb-3">Every child yearns to learn
+                                </h5>
+                                <h1 class="display-3 text-white">Ace Your Examinations with
+                                    Our
+                                    Trusted Platform</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">We simplify all the
+                                    moving
+                                    pieces so you can administer your exams securely and with confidence.</p>
+                                <div class="mt-5">
+                                    <a href="#section-4" class="btn m-2">Popular Quiz</a>
+                                    <a href="reviews.html" class="btn btn-outline-warning m-2">Reviews</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item text-center">
+                        <div class="row align-items-sm-center align-items-lg-stretch d-flex">
+                            <div class="col-12 col-md-5 order-md-2 carousel_img d-flex justify-content-center align-items-center"
+                                id="car_img_div_2" data-aos="fade-right">
+                                <img src="../imgs/learning_img_1.png" class="w-75" id="car_img_2">
+                            </div>
+                            <div class="col-12 col-md-7 order-md-1 carousel_text mt-5" id="car_des_div_2"
+                                data-aos="fade-left">
+                                <h5 class="text-uppercase mb-3">Every student can succeed</h5>
+                                <h1 class="display-3 text-white">Unlock Your Pathway to Your Academic Excellence</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">Our platform offers personalized
+                                    learning experiences, helping you achieve success in your exams.</p>
+                                <div class="mt-5">
+                                    <a href="#section-4" class="btn m-2">Popular Quiz</a>
+                                    <a href="reviews.html" class="btn btn-outline-warning m-2">Reviews</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section-3" id="section-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-xl-3" data-aos="fade-up">
+                    <div class="single_feature_text">
+                        <h2 class="display-4 sfth2">Awesome <br class="br"> Feature</h2>
+                        <p>Discover features designed to elevate your learning experience, combining
+                            innovative tools with seamless functionality to support your academic goals.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="single_feature">
+                        <div class="single_feature_part">
+                            <span class="single_feature_icon"><i class="fas fa-cogs fa-3x"></i></span>
+                            <h4>Better Interface</h4>
+                            <p>This platform is designed to be easy-to-use and approachable,
+                                providing smooth experience for students & educators alike.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3" data-aos="fade-up" data-aos-delay="500">
+                    <div class="single_feature">
+                        <div class="single_feature_part">
+                            <span class="single_feature_icon"><i class="fas fa-pen-alt fa-3x"></i></span>
+                            <h4>Customized Quiz</h4>
+                            <p>Create quizzes tailored to your curriculum with flexible
+                                difficulty levels, improving learning outcomes for students.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3" data-aos="fade-up" data-aos-delay="700">
+                    <div class="single_feature">
+                        <div class="single_feature_part">
+                            <span class="single_feature_icon"><i class="fas fa-lightbulb fa-3x"></i></span>
+                            <h4>Quick Evaluation</h4>
+                            <p>Get instant score evaluation with our quick evaluation tool,
+                                along with accurate timestamps & certificate of completion.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Quiz Section -->
+    <section class="section-4 special_cource" id="section-4">
+        <div class="container-fluid">
+            <div class="justify-content-center" data-aos="zoom-in">
+                <div class="section_title text-center">
+                    <h2 class="display-2 text-center">Popular Quiz</h2>
+                </div>
+            </div>
+
+            <!-- Swiper Container -->
+            <div class="swiper-container row justify-content-center align-items-center" data-aos="zoom-in">
+                <div class="swiper-button-prev col-1"></div>
+                <div class="swiper-wrapper col-10">
+                    <div class="swiper-slide" data-title="Math Exam" data-img="../imgs/math.jpg"
+                        data-desc="Test your algebra, geometry, and trigonometry skills with this exam."
+                        data-professor="da" data-endtime="March 15, 2025, 00:00 AM" data-difficulty="Easy"
+                        data-timer="60 seconds" onclick="openQuizModal(this)">
+                        <div class="single_special_cource">
+                            <div class="special_img_div d-flex justify-content-center align-items-center">
+                                <img src="../imgs/math.jpg" class="special_img w-50">
+                            </div>
+                            <div class="special_cource_text">
+                                <h3 class="quizName">Math Exam</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide" data-title="Science Exam" data-img="../imgs/science.jpeg"
+                        data-desc="Prepare to demonstrate your understanding of scientific concepts."
+                        data-professor="b14" data-endtime="March 01, 2025, 00:00 PM" data-difficulty="Hard"
+                        data-timer="65 seconds" onclick="openQuizModal(this)">
+                        <div class="single_special_cource">
+                            <div class="special_img_div d-flex justify-content-center align-items-center">
+                                <img src="../imgs/science.jpeg" class="special_img w-50">
+                            </div>
+                            <div class="special_cource_text">
+                                <h3 class="quizName">Science Exam</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide" data-title="History Quiz" data-img="../imgs/history.jpeg"
+                        data-desc="Assess your knowledge of history with this comprehensive history quiz."
+                        data-professor="da" data-endtime="Feb 25, 2025, 00:00 AM" data-difficulty="Medium"
+                        data-timer="75 seconds" onclick="openQuizModal(this)">
+                        <div class="single_special_cource">
+                            <div class="special_img_div d-flex justify-content-center align-items-center">
+                                <img src="../imgs/history.jpeg" class="special_img w-50">
+                            </div>
+                            <div class="special_cource_text">
+                                <h3 class="quizName">History Quiz</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide" data-title="English Test" data-img="../imgs/english.jpeg"
+                        data-desc="Test your understanding of English literature, including analysis of texts and comprehension."
+                        data-professor="b14" data-endtime="Feb 27, 2025, 4:30 PM" data-difficulty="Medium"
+                        data-timer="70 seconds" onclick="openQuizModal(this)">
+                        <div class="single_special_cource">
+                            <div class="special_img_div d-flex justify-content-center align-items-center">
+                                <img src="../imgs/english.jpeg" class="special_img w-50">
+                            </div>
+                            <div class="special_cource_text">
+                                <h3 class="quizName">English Test</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next col-1"></div>
+
+                <div class="col-12 text-center mt-5">
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Modal -->
+        <div class="modal fade" id="quizModal" tabindex="-1" aria-labelledby="quizModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="quizModalLabel">Quiz Details</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-5 pb-4 d-flex justify-content-center align-items-center">
+                                <img id="modalImg" src="" class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-7">
+                                <p><strong>Title: <span id="modalTitle" class="text-center text-md-start"
+                                            style="font-size: 20px;"></span>
+                                    </strong>
+                                </p>
+                                <p><strong>Description:</strong> <span id="modalDesc"></span></p>
+                                <p><strong>Professor:</strong> <span id="modalProfessor"></span></p>
+                                <p><strong>Ends At:</strong> <span id="modalEndTime"></span></p>
+                                <p><strong>Difficulty Level: </strong>
+                                    <span id="modalDifficulty" class="badge px-2 py-1"></span>
+                                </p>
+                                <p><strong>Time Provided:</strong> <span id="modalTimer"></span></p>
+                                <button type="button" class="btn btn-primary mt-3"
+                                    data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section-5 learning_part d-flex align-items-center" id="section-5">
+        <div class="geometric-shapes section-5_background">
+            <div class="shape3"></div>
+            <div class="shape3"></div>
+            <div class="shape3"></div>
+            <div class="shape3"></div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 abt_img text-center" id="abt_img_div" data-aos="fade-right">
+                    <img src="../imgs/advance_feature_img_1.png" class="w-75" id="abt_img">
+                </div>
+                <div class="col-12 col-md-6 pt-4 p-3 abt_text" id="abt_text_div" data-aos="fade-left">
+                    <h5>About us</h5>
+                    <h2 class="display-4">Effortless Examination</h2>
+                    <p>Our portal simplifies the process of conducting exams, for a secure, efficient, and user-friendly
+                        experience.</p>
+                    <ul type="none">
+                        <li>
+                            <!-- <span class="fas fa-pencil-alt"></span> -->
+                            ✏️ Secure and seamless online exam
+                            administration for various subjects.
+                        </li>
+                        <li>
+                            <!-- <span class="fas fa-ruler"></span> -->
+                            📐 Advanced tools for creating customized quizzes
+                            and evaluations with ease.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-area" id="contact">
+        <div class="container-fluid pb-2">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mt-sm-5 mt-lg-0 text-center">
+                    <h4 class="mb-3">Quick Link</h4>
+                    <div class="d-flex justify-content-center">
+                        <ul type="none">
+                            <li><a class="btn-link" href="#section-2">Home</a></li>
+                            <li><a class="btn-link" href="#section-3">Features</a></li>
+                            <li><a class="btn-link" href="#section-4">Popular Quiz</a></li>
+                            <li><a class="btn-link" href="#section-5">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 text-center">
+                    <h4 class="mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>LJKU, Ahmedabad, Gujarat</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+91 98765XXXXX</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>ms@gmail.com</p>
+                    <div class="d-flex pt-2 justify-content-center">
+                        <a class="btn-social m-2 mt-0" style="margin-left: 0 !important;" href=""><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn-social m-2 mt-0" href=""><i class="fab fa-instagram"></i></a>
+                        <a class="btn-social m-2 mt-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 text-center">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="../imgs/dashboard.png" alt="Dashboard"
+                                data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this)">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="../imgs/profile.png" alt="Profile"
+                                data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this)">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="../imgs/quiz.png" alt="Quiz Page"
+                                data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this)">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="../imgs/grades.png" alt="Grades Page"
+                                data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this)">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="../imgs/certificate.png" alt="Certificate"
+                                data-bs-toggle="modal" data-bs-target="#imageModal" onclick="openModal(this)">
+                        </div>
+                        <div class="col-4">
+                            <video class="img-fluid bg-light p-1" src="../imgs/attempt_quiz.mp4"
+                                title="How to attempt quiz?" data-bs-toggle="modal" data-bs-target="#imageModal" tagName
+                                onclick="openModal(this)">
+                            </video>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="imageModalLabel">Image Gallery</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body d-flex justify-content-center align-items-center">
+                                    <img id="modalImage" src="" alt="Modal Image" class="w-75" style="display: none;">
+                                    <video id="modalVideo" class="w-75" controls style="display: none;">
+                                        <source id="videoSource" src="" type="video/mp4">
+                                    </video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mt-5 mt-lg-0 text-center">
+                    <h4 class="mb-3">Newsletter</h4>
+                    <p>Stay updated with the latest news, updates, and exclusive offers.</p>
+                    <div class="position-relative mx-auto" style="max-width: 450px;">
+                        <input class="form-control border-0 w-100 py-3" type="text" placeholder="Your email">
+                        <button type="button"
+                            class="btn py-2 position-absolute top-0 end-0 mt-2 me-2">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-3">
+            <div class="copyright text-center">
+                &copy; <a class="border-bottom" href="home.html">QuizFlow</a>, All Right Reserved.
+                Designed By <a class="border-bottom" href="https://github.com/themeetshah">Meet Arpitkumar Shah</a>
+            </div>
+        </div>
+    </footer>
+    <!-- footer part end-->
+
+    <!-- Logout Confirmation Modal -->
+    <div class="modal fade" id="logoutModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">Confirm Logout</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to log out?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="confirmLogout">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(element) {
+            // Hide both image and video initially
+            var modalImage = document.getElementById('modalImage');
+            var modalTitle = document.getElementById('imageModalLabel');
+            var modalVideo = document.getElementById('modalVideo');
+            var videoSource = document.getElementById('videoSource');
+
+            modalImage.style.display = "none";
+            modalVideo.style.display = "none";
+
+            // Check if it's an image or a video and show accordingly
+            if (element.tagName === 'IMG') {
+                modalTitle.innerText = element.alt;
+                modalImage.style.display = "block";
+                modalImage.src = element.src;  // Set image source for modal
+            } else if (element.tagName === 'VIDEO') {
+                modalTitle.innerText = element.title;
+                modalVideo.style.display = "block";
+                videoSource.src = element.src;  // Set video source for modal
+                modalVideo.load();  // Reload video to apply the new source
+            }
+        }
+    </script>
+    <script>
+        document.getElementById('confirmLogout').addEventListener('click', function () {
+            window.location.href = '../index/index.html';
+        });
+
+        const grades = document.getElementById('grades-tab-li')
+        const role = localStorage.getItem('loggedInRole');
+        if (role == 'professor') {
+            grades.style.display = 'none';
+        } else {
+            grades.style.display = 'block';
+        }
+    </script>
+
+    <script>
+        AOS.init({
+            duration: 1500, // Increased duration for smoother animation
+            easing: 'ease-in-out', // Smooth animation
+            once: true, // Animation runs only once
+            mirror: false // No animation on scroll up
+        });
+    </script>
+
+    <script>
+        var swiper = new Swiper(".swiper-container", {
+            loop: true, // Infinite loop
+            autoplay: {
+                delay: 3500, // Auto-slide every 3.5 seconds
+                disableOnInteraction: false, // Keep autoplay even if user interacts
+            },
+            centeredSlides: true, // Center active slide
+            slidesPerView: 1, // Only 3 slides visible (prev, active, next)
+            spaceBetween: 20,
+            loopFillGroupWithBlank: false, // No extra blank slides
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+                // 860: { slidesPerView: 3 },
+                // 1024: { slidesPerView: 3 }
+            }
+        });
+    </script>
+
+    <script>
+        function openQuizModal(element) {
+            // Get data from clicked slide
+            const title = element.getAttribute("data-title");
+            const imgSrc = element.getAttribute("data-img");
+            const desc = element.getAttribute("data-desc");
+            const professor = element.getAttribute("data-professor");
+            const endTime = element.getAttribute("data-endtime");
+            const difficulty = element.getAttribute("data-difficulty");
+            const timer = element.getAttribute("data-timer");
+
+            // Select the difficulty badge
+            const difficultyBadge = document.getElementById("modalDifficulty");
+
+            // Set text content
+            document.getElementById("modalTitle").innerText = title;
+            document.getElementById("modalImg").src = imgSrc;
+            document.getElementById("modalDesc").innerText = desc;
+            document.getElementById("modalProfessor").innerText = professor;
+            document.getElementById("modalEndTime").innerText = endTime;
+            document.getElementById("modalTimer").innerText = timer;
+
+            // Assign difficulty badge class based on difficulty level
+            difficultyBadge.innerText = difficulty;
+            difficultyBadge.className = "badge px-2 py-1"; // Reset previous classes
+            if (difficulty.toLowerCase() === "easy") {
+                difficultyBadge.classList.add("bg-success");
+            } else if (difficulty.toLowerCase() === "medium") {
+                difficultyBadge.classList.add("bg-warning");
+            } else {
+                difficultyBadge.classList.add("bg-danger");
+            }
+
+            // Show modal
+            var quizModal = new bootstrap.Modal(document.getElementById("quizModal"));
+            quizModal.show();
+        }
+    </script>
+
+    <!-- <script src="home_script.js"></script> -->
+    <script src="../index/index_script.js"></script>
+</body>
+
+</html>
