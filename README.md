@@ -53,7 +53,7 @@ QuizFlow/
 ### Setup:
 
 1. Clone the repository:  
-   ```git clone https://github.com/your-repo/quizflow.git```  
+   ```git clone https://github.com/themeetshah/quizflow.git```  
    ```cd quizflow```
     
 2. Configure MySQL Database:  
