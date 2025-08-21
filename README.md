@@ -3,7 +3,7 @@
 **QuizFlow** is a **web-based quiz management system** built with **PHP, MySQL, HTML, CSS, JavaScript, and Bootstrap**. It ensures **secure, time-bound exams** with tab-switch detection, fullscreen enforcement, and quick evaluation.  
 
 ## 🎥 Demo  
-- Preview the project [here](imgs/Working_demo.mp4).
+- Preview the project [here](https://www.linkedin.com/posts/themeetshahh_quizflow-webdevelopment-php-activity-7364210469697404929-RoXQ).
 
 ## 🚀 Features  
 
